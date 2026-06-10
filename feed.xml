@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[Okinawa Okinawa resort 안내]]></title>
-  <link>https://</link>
-  <description><![CDATA[Okinawa 정보 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-  <language>ko-KR</language>
-  <pubDate>Tue, 26 May 2026 09:12:53 GMT</pubDate>
-  <lastBuildDate>Tue, 26 May 2026 09:12:53 GMT</lastBuildDate>
-  <atom:link href="https:///feed.xml" rel="self" type="application/rss+xml" />
+  <title><![CDATA[정보]]></title>
+  <link>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort</link>
+  <description><![CDATA[정보 - Okinawa resort 안내 관련 최신 소식 및 가이드]]></description>
+  <language>ko</language>
+  <pubDate>Wed, 10 Jun 2026 02:49:45 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 02:49:45 GMT</lastBuildDate>
+  <atom:link href="https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[Okinawa Okinawa resort 안내 - 공식 홈페이지 오픈 안내]]></title>
-      <link>https:///</link>
-      <guid isPermaLink="true">https:///</guid>
-      <description><![CDATA[Okinawa 정보 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-      <pubDate>Tue, 26 May 2026 09:12:53 GMT</pubDate>
+      <title><![CDATA[창작한 제목]]></title>
+      <link>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/checklist-002-s86zta.html</link>
+      <guid isPermaLink="true">https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/checklist-002-s86zta.html</guid>
+      <description><![CDATA[### 포스트 메타정보포스트 기획 테마: Okinawa resort 안내 선택 전에 확인할 체크리스트와 실패 사례 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 이곳의 추천 정보 블레이드 러너 최종 컷, 리들리 스콧의 진실과 그 후의 비화]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[창작한 제목]]></title>
+      <link>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/compare-001-s86zta.html</link>
+      <guid isPermaLink="true">https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/compare-001-s86zta.html</guid>
+      <description><![CDATA[## 포스트 DNA 4023f91e ### 제목: 창작한 제목 #### 아, 진짜... 룸 단위 서비스업에서 가격대별 원가 구조와 마진율의 실제 분포를 파악하는 것은 복잡해 보입니다. 하지만 이 글에서는 한 가지 관점으로 접근하여 흘러간 유행을 재 khám하고자 합니다]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
