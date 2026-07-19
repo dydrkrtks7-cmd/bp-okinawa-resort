@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/</loc>
+    <loc>https://okinawa-resort-guide.pbn-builder.xyz/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/checklist-002-s86zta.html</loc>
+    <loc>https://okinawa-resort-guide.pbn-builder.xyz/posts/checklist-002-s86zta.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/compare-001-s86zta.html</loc>
+    <loc>https://okinawa-resort-guide.pbn-builder.xyz/posts/compare-001-s86zta.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/field_note-002-u51nk.html</loc>
+    <loc>https://okinawa-resort-guide.pbn-builder.xyz/posts/field_note-002-u51nk.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/posts/review-001-u51nk.html</loc>
+    <loc>https://okinawa-resort-guide.pbn-builder.xyz/posts/review-001-u51nk.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://dydrkrtks7-cmd.github.io/bp-okinawa-resort/feed.xml</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>

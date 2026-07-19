@@ -7,10 +7,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Yeti
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-Sitemap: https://okinawa-resort.pages.dev/sitemap.xml
+Sitemap: https://okinawa-resort-guide.pbn-builder.xyz/sitemap.xml
