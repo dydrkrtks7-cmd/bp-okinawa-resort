@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · okinawa-resort</title>
+  <meta name="description" content="okinawa-resort에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://okinawa-resort-guide.pbn-builder.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* --- 🎨 Color Theme: Noir Gold (primary=#1a1a1a, secondary=#fafaf5, accent=#c5a880) --- */
+ /* --- ✒️ Font: Serif --- */
+ 
+ :root {
+ --color-primary: #1a1a1a;
+ --color-secondary: #fafaf5;
+ --color-accent: #c5a880;
+ --font-serif: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: var(--font-serif);
+ background-color: #ffffff; /* 배경은 순백색으로 대비 극대화 */
+ color: var(--color-primary);
+ line-height: 1.65;
+ }
+
+ /* --- Layout Rules & Spacing --- */
+ .container {
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 48px var(--space-padding); /* padding: 48px */
+ }
+
+ header, main, section, footer {
+ padding: 0 calc(var(--space-padding));
+ /* 섹션 간격 (gap)은 CSS Grid/Flex를 사용하거나, margin으로 처리 */
+ }
+ 
+ section {
+ margin-bottom: var(--section-gap); /* section-gap: 80px */
+ }
+
+ .section-content {
+ padding: 48px 0; /* 섹션 내부 패딩을 더 명확히 함 */
+ }
+
+
+ /* --- Typography & Design DNA --- */
+ h1, h2, h3 {
+ font-weight: 700; /* Bold 느낌 강조 */
+ line-height: 1.25;
+ margin-bottom: 24px; /* 기본 마진 셜정 */
+ }
+
+ h1 {
+ font-size: clamp(2rem, 6vw, 3.5rem);
+ letter-spacing: 0.04em; /* Generous letter-spacing */
+ }
+ 
+ h2 {
+ font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+ color: var(--color-accent);
+ border-bottom: 3px solid rgba(197, 168, 128, 0.5); /* Fine border */
+ padding-bottom: 8px;
+ }
+
+ h3 {
+ font-size: 1.3rem;
+ margin-top: 32px; /* h3 자체의 위쪽 간격 */
+ }
+
+
+ /* --- Hero Section (Cinematic Gradient Overlay) --- */
+ #hero {
+ /* 배경 그라데이ᅵ션 정의 */
+ background: linear-gradient(145deg, rgba(26, 26, 26, 0.9) 0%, var(--color-primary) 100%);
+ text-align: center;
+ padding: 120px 20px; /* 더 드라마틱한 높이 */
+ position: relative;
+ }
+
+ #hero::before {
+ /* 은은한 광택/빛 번짐 효과를 위한 가상 요소 */
+ content: '';
+ position: absolute;
+ top: -50px;
+ left: -50px;
+ width: 200%;
+ height: 200%;
+ background: radial-gradient(circle at center, rgba(197, 168, 128, 0.1) 0%, transparent 70%);
+ z-index: 0;
+ }
+
+ .hero-content {
+ position: relative; /* 콘텐츠를 그라데이션 위에 놓기 위해 */
+ z-index: 1;
+ }
+
+ #hero h1 {
+ color: var(--color-secondary);
+ margin-bottom: 16px;
+ }
+
+ .hero-tagline {
+ font-size: clamp(1.2rem, 3vw, 1.75rem);
+ color: var(--color-accent);
+ letter-spacing: 0.08em;
+ display: block;
+ margin-bottom: 40px;
+ }
+
+ /* --- Drop Cap Styling (Hero Body Text) --- */
+ #hero p {
+ font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+ color: rgba(250, 250, 245, 0.95);
+ line-height: 1.7;
+ }
+
+ #hero p::first-letter {
+ font-size: 4.5em; /* 드롭캡 크기 */
+ float: left;
+ line-height: 0.9;
+ margin-right: 1rem;
+ color: var(--color-accent);
+ font-weight: 900;
+ }
+
+
+ /* --- UGC Review Card Styling --- */
+ .review-card {
+ background-color: var(--color-secondary); /* 밝은 배경 위에 배치 */
+ border: 1px solid rgba(26, 26, 26, 0.1); /* Fine border */
+ padding: 32px; /* generous padding */
+ margin-bottom: 32px; /* gap 32px (card spacing) */
+ }
+
+ .review-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 16px;
+ border-bottom: 1px dotted rgba(197, 168, 128, 0.5); /* 더 미묘한 구분선 */
+ padding-bottom: 10px;
+ }
+
+ .review-author {
+ font-size: 1.1rem;
+ font-weight: bold;
+ color: var(--color-primary);
+ }
+
+ .review-date {
+ font-size: 0.9rem;
+ color: #777;
+ }
+
+ .stars {
+ font-size: 1.4rem;
+ /* 별 모양을 CSS로 구현 (SVG 대체) */
+ color: gold; /* 황금빛으로 강조 */
+ letter-spacing: -0.05em;
+ }
+
+ .review-body p {
+ margin-top: 10px;
+ font-style: italic;
+ /* 리뷰 내용에 약간의 간격 부여 */
+ letter-spacing: 0.02em; 
+ }
+
+ /* --- Links & Utility --- */
+ a {
+ color: var(--color-accent);
+ text-decoration: none;
+ transition: color 0.2s ease;
+ border-bottom: 1px solid rgba(197, 168, 128, 0.3); /* 링크 자체에 미세한 밑줄 */
+ }
+
+ a:hover {
+ color: var(--color-primary);
+ border-bottom-color: var(--color-accent);
+ }
+
+
+ /* --- Footer --- */
+ footer {
+ text-align: center;
+ padding: 40px var(--space-padding) 20px;
+ margin-top: 80px; /* 섹션 간격과 맞추기 위해 여유 공간 확보 */
+ border-top: 1px solid rgba(26, 26, 26, 0.1);
+ }
+
+ footer p {
+ font-size: 0.9rem;
+ color: #7f7f7f;
+ margin-bottom: 8px;
+ }
+
+
+ /* --- Responsive Design (Mobile Optimization) --- */
+ @media (max-width: 768px) {
+ .container {
+ padding: 30px 24px; /* 모바일 패딩 조정 */
+ }
+
+ h1 {
+ font-size: clamp(2rem, 8vw, 3rem);
+ }
+
+ /* 드롭캡이 좌측에 붙는 것을 고려하여 여백 조정 */
+ #hero p::first-letter {
+ margin-right: 0.75rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · okinawa-resort">
+  <meta property="og:description" content="okinawa-resort에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://okinawa-resort-guide.pbn-builder.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="container">
+ <!-- 로고/사이트명 (과장된 느낌으로) -->
+ <div style="text-align: center;">
+ <h1 style="margin-bottom: 5px; font-size: 3.2rem; letter-spacing: 0.06em;">Okinawa Archive</h1>
+ <p style="font-style: italic; color: var(--color-accent); font-size: 1.1rem;">The Curator's Deep Dive into Island Luxury 🌴</p>
+ </div>
+
+ <!-- 네비게이션 (PC 레이아웃) -->
+ <nav style="display: flex; justify-content: center; gap: 40px; padding-top: 32px; border-bottom: 1px solid rgba(26, 26, 26, 0.1);">
+ <a href="#home">🏡 홈 (메인 아카이브)</a>
+ <a href="#resorts">🏨 리조트 분석</a>
+ <a href="#guides">🗺️ 지역 가이드</a>
+ <a href="#reviews">⭐ 사용자 기록</a>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0178.html">Okinawa resort 안내에서 배우는 합정 노래방 추천정보 팁</a>
+        <p class="post-item__summary">흔히 노래방은 단순히 노래를 부르는 공간일 뿐이라며 운영 시간대와 관계없이 방문해도 좋다는 오해를 하곤 합니다. 하지만 Okinawa resort 안내 정보가 장소마다 최적의 방문 시기가 있음을 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0179.html">Okinawa resort 안내와 함께하는 연남 클럽 추천정보 활용법</a>
+        <p class="post-item__summary">즐거운 클럽 방문을 위해서는 적절한 인원 구성, 안전한 이동 동선, 그리고 취향에 맞는 음악 장르라는 세 가지 조건이 충족되어야 합니다. Okinawa resort 안내 정보를 꼼꼼히 살피며 여행을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0180.html">Okinawa resort 안내로 알아보는 합정 셔츠룸 추천정보 선택 기준</a>
+        <p class="post-item__summary">혹시 오늘 밤 합정에서 특별한 유흥을 계획하고 계신가요? 단순히 이름만 보고 업체를 결정하는 것이 과연 현명한 선택일지 고민해 보셨습니까? 마치 Okinawa resort 안내를 통해 숙박 시설을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0181.html">Okinawa resort 안내를 통한 공덕 가라오케 추천정보 활용법</a>
+        <p class="post-item__summary">해외 여행지인 Okinawa resort 안내 문서를 접하듯 우리 동네의 놀이 문화를 탐색할 때도 체계적인 접근이 필요합니다. 특히 공덕 지역에서 만족스러운 밤 문화를 즐기기 위해서는 검증된 정보를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0182.html">Okinawa resort 안내 정보와 비교하는 상수 마사지 추천정보 기준</a>
+        <p class="post-item__summary">먼 곳의 Okinawa resort 안내 자료를 참고하여 휴양 계획을 세우는 것처럼, 근교의 피로 회복을 위해 마사지샵을 찾을 때도 기준이 필요합니다. 상수 인근에는 다양한 매장이 존재하지만, 무조</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0183.html">Okinawa resort 안내 읽듯 주의할 망원 노래방 추천정보 예약법</a>
+        <p class="post-item__summary">낯선 여행지에서 Okinawa resort 안내 정보를 미리 숙지하지 않아 곤란을 겪는 일처럼, 망원 인근에서 즐거운 시간을 보내려다 예약 단계에서 실패하는 경우가 많습니다. 많은 이용자가 세부적인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0184.html">Okinawa resort 안내 활용법으로 보는 홍대 노래방 추천정보 체크리스트</a>
+        <p class="post-item__summary">해외의 Okinawa resort 안내 페이지를 보며 교통편을 확인하는 것과 마찬가지로, 홍대 지역에서 즐거운 노래방 일정을 잡을 때도 접근성은 매우 중요한 요소입니다. 이동 시간은 전체 놀이 시간</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0185.html">Okinawa resort 안내를 통해 본 공덕 셔츠룸 추천정보와 공덕 유흥 공략</a>
+        <p class="post-item__summary">낯선 타지에서 완벽한 휴식을 찾으려 할 때 Okinawa resort 안내를 참고하듯, 서울 도심의 유흥 문화를 즐길 때도 철저한 사전 조사가 필요합니다. 공덕 지역은 다양한 비즈니스 모임이 빈번하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0186.html">Okinawa resort 안내로 확인하는 연남 유흥 추천정보와 올바른 방문 타이밍</a>
+        <p class="post-item__summary">흔히 연남동의 밤 문화가 지나치게 자극적이라고 오해하는 경우가 많지만, 이는 일부 단면만을 보고 판단한 결과입니다. Okinawa resort 안내가 여행의 질을 결정짓듯, 이곳의 유흥 또한 어떤 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0187.html">Okinawa resort 안내와 비교하는 마곡 가라오케 추천정보 및 인원별 가이드</a>
+        <p class="post-item__summary">쾌적한 공간 구성, 수준 높은 음향 시설, 그리고 신속한 응대는 가라오케가 갖춰야 할 필수 조건입니다. 마치 Okinawa resort 안내에서 시설의 등급을 꼼꼼히 살피듯, 마곡 지역의 명소를 찾</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0201.html">Okinawa resort 안내를 통한 구글 틈새 키워드 트래픽 외환 거래 전략 수립 방법</a>
+        <p class="post-item__summary">해외 휴양지 정보를 찾던 사용자가 우연히 특정 광고 배너를 클릭했을 때 발생하는 데이터 흐름을 추적해보면 흥미로운 결과가 나옵니다. 단순한 여행지 검색이 수익형 모델로 전환되는 과정은 정교한 분석 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0202.html">Okinawa resort 안내로 알아보는 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드</a>
+        <p class="post-item__summary">특정 서비스에 대한 후기가 사실인지 허구인지 구분하기 어렵다는 고정관념은 마케팅 시장에서 큰 장애물이 되곤 합니다. Okinawa resort 안내와 같은 일반적인 여행 정보 사이트에서도 이러한 신</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-u51nk.html">관점에서 본 가격대별 원가 구조와 마진율</a>
+        <p class="post-item__summary">백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 이곳의 추천 정보</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
